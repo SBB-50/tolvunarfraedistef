@@ -3,11 +3,11 @@ public static void main(String[] args){
   hluti1();
   int[] hlidar = hluti2(1000);
   for (int i = 0; i < hlidar.length; i++) {
-   System.out.println("hlid " + (i+1) + "kom upp " + hlidar[i] +"sinnum");
+    System.out.println("hlid " + (i+1) + "kom upp " + hlidar[i] +" sinnum");
   }
   int[] summur = hluti3(1000);
   for (int i = 0; i < hlidar.length; i++) {
-   System.out.println("hlid " + (i+1) + "kom upp " + hlidar[i] +"sinnum");
+   System.out.println("summa " + (i+1) + "kom upp " + hlidar[i] +" sinnum");
   }
 
 }
@@ -30,10 +30,10 @@ public static int teningar(int fjoldihlida, int fjolditeninga){
 }
 public static int[]hluti2(int fjoldikasta){
     
-    int[] geymsla = new int[fjoldikasta];
-    int[] teljarafylki2 = new int[1000];
+    int[] geymsla = new int[12];
+    int[] teljarafylki2 = new int[fjoldikasta];
     int teljari2 = 0;
-      for (int n = 0; n < 1000;n++) {
+      for (int n = 0; n < fjoldikasta;n++) {
         int thusund2 = (int)(Math.random()*13); 
         teljarafylki2[n]=thusund2;
         //System.out.println(Arrays.toString(teljarafylki));
@@ -43,7 +43,7 @@ public static int[]hluti2(int fjoldikasta){
         //teljari++;
       //}
     }
-    for (int v = 1; v <= 12; v++){
+      for (int v = 1; v < 13; v++){
       //System.out.println(v);
      for (int s = 0; s < fjoldikasta ; s++) {
        //System.out.println(s);
@@ -52,17 +52,17 @@ public static int[]hluti2(int fjoldikasta){
        //  System.out.println(teljari2);
         } 
       }
-    geymsla[v] = teljari2;
+    geymsla[v-1] = teljari2;
     teljari2=0;
      }
-
+  return geymsla;
 }
 public static int[]hluti3(int fjoldikasta){
     
-    int[] geymsla = new int[fjoldikasta];
-    int[] teljarafylki2 = new int[1000];
+    int[] geymsla = new int[10];
+    int[] teljarafylki2 = new int[fjoldikasta];
     int teljari2 = 0;
-      for (int n = 0; n < 1000;n++) {
+      for (int n = 0; n < fjoldikasta;n++) {
         int thusund2 = (int)(Math.random()*7);
         int thusund3 = (int)(Math.random()*7);
         teljarafylki2[n]=thusund2+thusund3;
@@ -73,18 +73,18 @@ public static int[]hluti3(int fjoldikasta){
         //teljari++;
       //}
     }
-    for (int v = 1; v <= 12; v++){
+    for (int v = 1; v < 11; v++){
       //System.out.println(v);
-     for (int s = 0; s < fjoldikasta ; s++) {
+     for (int s = 0; s < 1000 ; s++) {
        //System.out.println(s);
        if(teljarafylki2[s]==v){
          teljari2++;
        //  System.out.println(teljari2);
         } 
       }
-    geymsla[v] = teljari2;
+    geymsla[v-1] = teljari2;
     teljari2=0;
      }
-
+  return geymsla;
 }
 }
