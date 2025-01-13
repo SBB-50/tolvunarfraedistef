@@ -5,10 +5,14 @@ public class verk14{
     double medal = Double.parseDouble(args[1]);
     double stadal = Double.parseDouble(args[2]);
     for (int i = 0; i < staerd; i++) {
-      safn[i] = StdRandom.gaussian(double medal, double stadal)
+      safn[i] = StdRandom.gaussian(medal,stadal);
     }
   StdOut.println("Haesta talan var: " + StdStats.max(safn));
   StdOut.println("Laegsta talan var: " + StdStats.min(safn));
+  StdOut.println("Medalgildi var: " + StdStats.mean(safn));
+  StdOut.println("Stadalfravik var: " + StdStats.stddev(safn));
+  StdStats.plotBars(reiknaTidni(safn,staerd));
+  
   }
 private static double[] reiknaTidni(double[] tolur, int fjoldibila) {
   double range = Math.ceil(StdStats.max(tolur) - StdStats.min(tolur));
