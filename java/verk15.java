@@ -39,7 +39,7 @@ public class verk15{
     System.out.println("en tapadir i "+ donttelja[0]+" skipti");
     System.out.println("Thu fekkst peninginn til baka i "+donttelja[2]+" skipti");
     System.out.println("Vinningshlutfallid er "+donttelja[1]/donttelja[0]);
-    System.out.println(wintelja[5]);
+    //System.out.println(wintelja[5]);
     StdStats.plotBars(wintelja);
   }
   public static int passbet(){
