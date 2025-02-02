@@ -57,16 +57,7 @@ public class verk16{
     }
   }
   public static int pascal(int m,int n){
-    if(m==0){return 1;}
-    else if(n==m){
-      
-      //System.out.print("n==m");
-      return 1;
-    }
-    else if(n==1){
-      //System.out.printf("n=1");
-      return 1;
-    }
-    else{return pascal(m-1,n-1)+pascal(m-1,n);}
+    if(n==m||n==0){return 1;}
+    return pascal(m-1,n-1)+pascal(m-1,n);
   }
 }
